@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+		font-family: arial;
+      }
+	  html, body{
+	   height: 100%;
+	  }
+	  body{
+	   background: #dcdcdc;
+	  }
+	  /*layout*/
+	  #header{
+	    position: fixed;
+		z-index: 5;
+		left: 0;
+		right: 0;
+		height: 50px;
+		background: #fff;
+		padding: 10px 0 0 50px;
+		color: #00b7ff;
+		-webkit-box-shadow: 0px 5px 10px 0px rgba(50, 50, 50, 0.5);
+        -moz-box-shadow:    0px 5px 10px 0px rgba(50, 50, 50, 0.5);
+         box-shadow:         0px 5px 10px 0px rgba(50, 50, 50, 0.5);
+	  }
+	  #main{
+	    padding: 110px 0 20px 197px;
+		
+	  }
+	  #sidebar{
+	    position: absolute;
+	    top: 0;
+		left: 0;
+	    
+	    width: 197px;
+		background: #494949;
+		padding: 0 0 0 0;
+		overflow: visible;
+		height:100%;
+	  }
+	  
+	  ul{
+	   list-style: none;
+	   padding: 80px 0 10px 0;
+	  }
+	  li{
+	   padding: 5px;
+	   text-align: center;
+	   }
+     button{
+	   padding: 10px 0;
+	   width: 150px;
+	   text-align: center;
+	 }
+	 textarea{
+	  width: 150px;
+	  height: 200px;
+	  background: #dcdcdc;
+	 }
+	 #canvasContainer{
+	  position: relative;
+	  width: 700px;
+	  height: 500px;
+	  margin: 0 auto;
+	 }
+	 #fileSelect{
+	  position: absolute;
+	  top: 250px;
+	  left: 275px;
+	  z-index: 2;
+	 }
+	 .bg{
+	   height: 10px;
+	   width: 10px;
+	   float: left;
+	   background: black;
+	 }
+	 #myCanvas{
+	 -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+     -moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+      box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+	 <h1>Making Motivational Posters</h1>
+	</div>
+	<div id="main">
+	<div id="sidebar">
+	<ul>
+	 <li><button id="scaleup">Zoom <i class="fa fa-search-plus"></i></button></li>
+	 <li><button id="scaledown">Zoom <i class="fa fa-search-minus"></i></button></li>
+	 <li><button id="cwise">Rotate <i class="fa fa-repeat"></i></button></li>
+	 <li><button id="acwise">Rotate <i class="fa fa-undo"></i></button></li>
+	 <li>Add Your Caption</li>
+	 <li><textarea id="textbox" maxlength="100"></textarea></li>
+	 <li><i class="fa fa-square"></i> <i class="fa fa-square-o"></i></li>
+	 <li><button id="clear">Clear</button>
+	</ul>
+	</div>
+	<div id="canvasContainer">
+    <div id="myCanvas" >
+	</div>
+	<p><input type="file" id="input" style="display:none;" /></p>
+	 <p><button id="fileSelect">Choose an image <i class="fa fa-photo"></i></button></p>
+	</div>
+    <script src="./kinetic.js"></script>
+	<script src="./script.js"></script>  
+	
+	</div>
+  </body>
+</html>      
